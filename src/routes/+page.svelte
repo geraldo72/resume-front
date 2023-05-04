@@ -1,4 +1,5 @@
 <script>
+    export const prerender = true;
 import Profile from '$lib/Profile.svelte'
 import History from '$lib/History.svelte'
 
