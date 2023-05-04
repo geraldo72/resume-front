@@ -12,7 +12,7 @@ import History from '$lib/History.svelte'
         <nav class="floating-nav js-floating-nav">
             <ul class="list-unstyled">
                 <li><a href="#about"><i class="mr-10 icon-board"></i>About</a></li>
-                <li><a href="#work-experience"><i class="mr-10 icon-office"></i>Work Experience</a></li>
+                <li><a href="#work-experience"><i class="mr-10 icon-office"></i>Work Experiences</a></li>
                 <li><a href="#skills"><i class="mr-10 icon-tools"></i>Skills</a></li>
                 <li><a href="#education"><i class="mr-10 icon-graduation-cap"></i>Education</a></li>
                 <li><a href="#interests"><i class="mr-10 icon-heart"></i>Interests</a></li>
