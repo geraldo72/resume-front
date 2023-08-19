@@ -6,11 +6,14 @@
     export let endDate;
     export let description;
     export let highlights;
-
+    
     function formatDate(dateStr) {
         return moment(dateStr).format("MMM, YYYY")
     }
     function calculateDuration(initDate,endDate){
+        if(!endDate){
+            endDate = moment.now();
+        }
         var duration = moment.duration(moment(endDate).diff(initDate,"months"),"month")
         return (duration.years()<1?'':`${duration.years()} ${duration.years()>1?'years':'year'}`)+` ${duration.months()} ${duration.months()>1?'months':'month'}`
     }
