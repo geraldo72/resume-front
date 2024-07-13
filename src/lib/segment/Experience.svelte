@@ -14,7 +14,7 @@
         if(!endDate){
             endDate = moment.now();
         }
-        var duration = moment.duration(moment(endDate).diff(initDate,"months"),"month")
+        var duration = moment.duration(moment(endDate).diff(initDate,"months")+1,"month")
         return (duration.years()<1?'':`${duration.years()} ${duration.years()>1?'years':'year'}`)+` ${duration.months()} ${duration.months()>1?'months':'month'}`
     }
 </script>

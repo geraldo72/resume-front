@@ -12,7 +12,7 @@
 </script>
 <li class="card card-nested">
     <div class="content">
-        <p class="clear-margin relative"><strong>{degree},&nbsp;{type}, </strong><a href={url}>{institution}</a></p>
+        <p class="clear-margin relative"><strong>{degree},&nbsp;{type}, </strong><a target="_blank" href={url}>{institution}</a></p>
         <p class="text-muted"><small>{formatDate(initDate)} - {formatDate(endDate)}</small></p>
     </div>
 </li>
