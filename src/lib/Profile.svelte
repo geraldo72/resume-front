@@ -22,9 +22,9 @@
     <div class="card profile-card">
         <span class="profile-pic-container">
             <div class="profile-pic">
-                <img alt="{basics.name}" class="media-object img-circle center-block"
+                <img alt={basics.name} class="media-object img-circle center-block"
                      data-src="holder.js/100x100" itemprop="image"
-                     src="{getGravatarURL(basics.email)}">
+                     src={getGravatarURL(basics.email)}>
             </div>
             <div class="name-and-profession text-center">
                 <h3 itemprop="name"><b>{basics.name}</b></h3>
@@ -39,13 +39,13 @@
             </div>
             <div class="detail">
                 <span class="icon"><i class="icon fs-lg icon-mail"></i></span>
-                <span class="info"><a class="link-disguise" href="mailto:{basics.email}"
+                <span class="info"><a class="link-disguise" href={"mailto:" + basics.email}
                                       itemprop="email">{basics.email}</a></span>
             </div>
             <div class="detail">
                 <span class="icon"><i class="icon fs-lg icon-link"></i></span>
                 <span class="info">
-                    <a href="{basics.website}" target="_blank">{basics.website}</a>
+                    <a href={basics.website} target="_blank">{basics.website}</a>
                 </span>
             </div>
             <div class="detail">
@@ -62,9 +62,9 @@
             <div>
                 {#each basics.profiles as profile,i}
                 <a class="fs-2x social-link link-{profile.network} icon-{profile.network}"
-                   data-original-title="{basics.name} on {profile.network}"
+                   data-original-title={`${basics.name} on ${profile.network}`}
                    data-toggle="tooltip"
-                   href="{profile.url}" target="_blank"
+                   href={profile.url} target="_blank"
                    title=""></a>
                 {/each}
             </div>
