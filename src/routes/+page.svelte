@@ -2,11 +2,31 @@
 
 import Profile from '$lib/Profile.svelte'
 import History from '$lib/History.svelte'
+import { goto } from '$app/navigation'
+import { page } from '$app/stores'
 
-/** @type {import('./$types').PageData} */    export let data;
+/** @type {import('./$types').PageData} */ export let data;
+
+/** @type {string} */
+let language
+$: language = $page.url.searchParams.get('language') || 'en'
+
+/**
+ * @param {Event} event
+ */
+function switchLanguage(event) {
+    const select = /** @type {HTMLSelectElement} */ (event.target)
+    goto(`/?language=${select.value}`)
+}
 </script>
 <body itemscope="itemscope" itemtype="http://schema.org/Person">
 <div class="container-fluid">
+    <div class="language-switcher text-end p-2">
+        <select on:change={switchLanguage} bind:value={language}>
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+        </select>
+    </div>
     <div class="row main clearfix"><a class="js-floating-nav-trigger floating-nav-trigger" href="#"><i
         class="icon-bars"></i><span class="close-icon">×</span></a>
         <nav class="floating-nav js-floating-nav">
