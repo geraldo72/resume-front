@@ -8,7 +8,7 @@
             <li>
                 <span >{#if code != null}{code} - {/if}{name}</span>
                 {#if certLink != null}
-                    <small><a target="_blank" href="{certLink}">Certificate</a></small>
+                    <small><a target="_blank" href={certLink}>Certificate</a></small>
                 {:else}
                 {/if}
                 {#if duration != null}
